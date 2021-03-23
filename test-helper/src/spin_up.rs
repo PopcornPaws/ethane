@@ -117,9 +117,7 @@ impl ConnectorNodeBundle<Http> {
             process: Some(process),
         }
     }
-}
 
-impl ConnectorNodeBundle<Http> {
     pub fn ganache() -> Self {
         let connector = Connector::http("http://localhost:8545", None).unwrap();
         ConnectorNodeBundle{

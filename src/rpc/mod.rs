@@ -37,7 +37,7 @@ mod web3;
 /// Wrapper for the remote procedure call
 ///
 /// This is usually not directly needed and returned by the [functions](crate::rpc) which
-/// wrap the different namespaces. However, it is also possible to create custom Rpc structs.
+/// wraps the different namespaces. However, it is also possible to create custom Rpc structs.
 #[derive(Serialize, Debug)]
 pub struct Rpc<T: DeserializeOwned + Debug> {
     #[serde(rename = "jsonrpc")]

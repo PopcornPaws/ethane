@@ -4,6 +4,7 @@ use std::str::FromStr;
 
 use test_helper::*;
 
+/*
 #[test]
 fn test_personal_list_accounts() {
     let mut client = ConnectorWrapper::new_from_env(None);
@@ -103,3 +104,4 @@ fn test_personal_ec_recover() {
         H160::from_str(FIX_ADDRESS).unwrap(),
     )
 }
+*/

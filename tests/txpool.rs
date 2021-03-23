@@ -3,6 +3,7 @@ use ethane::types::{TransactionRequest, U256};
 
 use test_helper::*;
 
+/*
 #[test]
 #[ignore] // @TODO not supported
 fn test_txpool_status() {
@@ -45,3 +46,4 @@ fn test_txpool_inspect() {
     }
     rpc_call_test_some(&mut client, rpc::txpool_inspect());
 }
+*/

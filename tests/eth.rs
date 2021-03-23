@@ -46,6 +46,7 @@ fn test_eth_hashrate() {
     rpc_call_test_expected(&mut client, rpc::eth_hashrate(), U256::from(0));
 }
 
+/*
 #[test]
 fn test_eth_gas_price() {
     let mut client = ConnectorWrapper::new_from_env(None);
@@ -66,11 +67,10 @@ fn test_eth_accounts() {
 }
 
 #[test]
-#[ignore]
 fn test_eth_block_number() {
     let mut client = ConnectorWrapper::new_from_env(None);
     let block_number = rpc_call_with_return(&mut client, rpc::eth_block_number());
-    if !block_number.gt(&U64::from(12000000)) {
+    if !dbg!(block_number).gt(&U64::from(12000000)) {
         panic!("Invalid block number");
     }
 }
@@ -806,3 +806,4 @@ fn test_eth_submit_work() {
 fn test_eth_submit_hashrate() {
     assert!(false, "This RPC is not supported anymore.");
 }
+*/
