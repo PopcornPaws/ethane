@@ -3,7 +3,7 @@ use ethane::types::{Bytes, H256};
 use std::str::FromStr;
 
 use test_helper::*;
-/*
+
 #[test]
 fn test_web3_client_version() {
     let mut client = ConnectorWrapper::new_from_env(None);
@@ -17,4 +17,3 @@ fn test_web3_sha3() {
     let expected = H256::from_str(KECCAK_HASH_OF_EMPTY_STRING).unwrap();
     rpc_call_test_expected(&mut client, rpc::web3_sha3(empty), expected);
 }
-*/

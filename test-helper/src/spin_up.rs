@@ -25,11 +25,12 @@ impl ConnectorWrapper {
         let conn = match conn_type {
             Some(conn) => String::from(conn),
             None => String::from(std::env::var("CONNECTION")
-                .unwrap_or_else(|_| String::from("ganache")) // @TODO
+                .unwrap_or_else(|_| String::from("geth")) // @TODO
                 .as_str())
         };
         match &conn[..] {
             "ganache" => Self::Http(ConnectorNodeBundle::ganache()),
+            "geth" => Self::Http(ConnectorNodeBundle::geth()),
             "http" => Self::Http(ConnectorNodeBundle::http()),
             "ws" => Self::Websocket(ConnectorNodeBundle::ws()),
             #[cfg(target_family = "unix")]
@@ -119,6 +120,14 @@ impl ConnectorNodeBundle<Http> {
     }
 
     pub fn ganache() -> Self {
+        let connector = Connector::http("http://localhost:8545", None).unwrap();
+        ConnectorNodeBundle{
+            connector: connector,
+            process: None,
+        }
+    }
+
+    pub fn geth() -> Self {
         let connector = Connector::http("http://localhost:8545", None).unwrap();
         ConnectorNodeBundle{
             connector: connector,

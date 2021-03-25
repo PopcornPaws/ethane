@@ -12,6 +12,7 @@ const ADDRESS1: &str = "0x95eDA452256C1190947f9ba1fD19422f0120858a";
 const ADDRESS2: &str = "0x1A4C0439ba035DAcf0D573394107597CEEBF9FF8";
 const ADDRESS3: &str = "0x5354fcfeB16E8B36FcE591d8A9fc44aAD81c7ca6";
 
+/*
 #[test]
 fn test_eth_protocol_version() {
     let mut client = ConnectorWrapper::new_from_env(None);
@@ -46,7 +47,6 @@ fn test_eth_hashrate() {
     rpc_call_test_expected(&mut client, rpc::eth_hashrate(), U256::from(0));
 }
 
-/*
 #[test]
 fn test_eth_gas_price() {
     let mut client = ConnectorWrapper::new_from_env(None);

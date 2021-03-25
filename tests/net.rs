@@ -1,7 +1,6 @@
 use ethane::rpc;
 
 use test_helper::*;
-/*
 #[test]
 fn test_net_version() {
     let mut client = ConnectorWrapper::new_from_env(None);
@@ -9,7 +8,6 @@ fn test_net_version() {
 }
 
 #[test]
-#[ignore]
 fn test_net_peer_count() {
     let mut client = ConnectorWrapper::new_from_env(None);
     rpc_call_test_some(&mut client, rpc::net_peer_count());
@@ -20,4 +18,3 @@ fn test_net_listening() {
     let mut client = ConnectorWrapper::new_from_env(None);
     rpc_call_test_some(&mut client, rpc::net_listening());
 }
-*/
