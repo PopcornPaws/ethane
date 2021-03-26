@@ -61,3 +61,8 @@ pub fn personal_ec_recover(message: Bytes, signature: Bytes) -> Rpc<H160> {
     rpc.add_param(signature);
     rpc
 }
+
+// TODO do we need the following methods as well? - only supported by klatyn
+// - personal_replaceRawKey
+// - personal_sendAccountUpdate
+// - personal_sendValueTransfer

@@ -44,7 +44,7 @@ pub fn create_secret() -> H256 {
 pub fn import_account(client: &mut ConnectorWrapper, secret: H256) -> H160 {
     client
         .call(rpc::personal_import_raw_key(
-            PrivateKey::ZeroXPrefixed(secret),
+            PrivateKey::NonPrefixed(secret), // NOTE geth requires a non-prefixed key
             String::from(ACCOUNTS_PASSWORD),
         ))
         .unwrap()

@@ -1,6 +1,6 @@
 use ethane::rpc;
-
 use test_helper::*;
+
 #[test]
 fn test_net_version() {
     let mut client = ConnectorWrapper::new_from_env(None);
